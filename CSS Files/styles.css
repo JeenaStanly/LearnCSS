@@ -1,0 +1,28 @@
+* {
+    background-color: bisque
+}
+
+body {
+    font-family: 'Times New Roman';
+}
+
+main {
+    font-size: 16px;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    color: darkolivegreen;
+}
+
+.aqua {
+    background-color: cadetblue;
+    color: darkblue;
+}
+
+#article3 p {
+    font-weight: bold;
+}
