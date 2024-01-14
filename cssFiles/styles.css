@@ -19,8 +19,8 @@ p {
 }
 
 .aqua {
-    background-color: cadetblue;
-    color: darkblue;
+    background-color: rgb(245, 245, 121);
+    color: hsl(311, 75%, 53%)
 }
 
 #article3 p {
