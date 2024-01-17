@@ -24,3 +24,8 @@
     border-radius: 50px;
 
 }
+
+input,
+button {
+    font: inherit;
+}
