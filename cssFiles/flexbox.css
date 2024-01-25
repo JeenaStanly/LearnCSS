@@ -65,6 +65,10 @@ body {
 
 }
 
+.box:nth-child(2) {
+    order: 3;
+}
+
 .container2 {
 
     max-width: 800px;
@@ -97,6 +101,7 @@ body {
 
 .box1:nth-child(2) {
     flex-grow: 2;
+    order: -1;
     /*In this case the second child will get 2 times the space that the first child got */
 }
 
