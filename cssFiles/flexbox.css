@@ -144,11 +144,11 @@ body {
 }
 
 /*
- ---flex--- 
- flex property combine flex-grow,flex-shrink,flex-basis
- we can provide three values to a single property
- like this
- flex: 1 1 250px;
- flex:1 1 40%;
- 
+---flex--- 
+flex property combine flex-grow,flex-shrink,flex-basis
+we can provide three values to a single property
+like this
+flex: 1 1 250px;
+
+flex:1 1 40%;
 */
