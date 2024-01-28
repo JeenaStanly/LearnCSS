@@ -71,6 +71,7 @@ body {
 .box1:nth-child(2) {
     background-color: aqua;
     color: blueviolet;
+
     grid-column: 1/5;
     /*     ---this combines grid-column-start and grid-column-end--- */
     grid-row: 3/4;
