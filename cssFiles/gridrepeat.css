@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 1rem "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0.5em;
+    background-color: rgb(54, 54, 146);
+
+}
+
+header,
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    color: aliceblue;
+
+}
+
+h1 {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid rgb(5, 5, 79);
+
+}
+
+nav {
+    background-color: whitesmoke;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid rgb(5, 5, 79);
+    color: black;
+
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: min(2vw, 20px);
+    padding: 1rem;
+}
+
+main section {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.square {
+    background-color: papayawhip;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+
+}
+
+.square-highlight {
+    background-color: cornflowerblue;
+}
+
+footer {
+    border: 2px solid rgb(5, 5, 79);
+
+}
+
+@media screen and (min-width:576px) {
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+
+        /* calc() function used to calculate here in this case it calculates the width according to the webpage. */
+    }
+}
