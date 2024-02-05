@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Variables */
+    --BGCOLOR: rgb(50, 36, 98);
+    --RADIAL-COLOR: whitesmoke;
+    --FONT-COLOR: #110101;
+    --ALT-FONTCOLOR: aliceblue;
+    /* Font Color */
+    --FONT-FAMILY: "Lato", sans-serif;
+    --FONT-SIZE: min(2.25rem, 3vh);
+    --FONTPARA-SIZE: max(1.75rem, 3vh);
+
+    /* "min" function use the smallest value in it .In both one is an absolute value where it can grow until the absolute value reaches ie; its maximum where another one is  relative to the webpage and ir responds acoordingly. 
+    "max" select the highest value
+    */
+    --FS-XL: clamp(1.75rem, 3vh.2.25rem);
+    /* General Styles */
+    --BORDER: 2px solid var(--FONTCOLOR);
+    --PADDING: 0.5em;
+}
+
+@media (prefers-color-theme:dark) {
+    :root {
+        --BGCOLOR: rgb(105, 13, 105);
+
+    }
+}
+
+body {
+    background-color: var(--BGCOLOR);
+    min-height: 100vh;
+    color: var(--FONT-COLOR);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--FONT-FAMILY);
+    font-size: var(--FONT-SIZE);
+    padding: var(--PADDING);
+
+
+
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-image: radial-gradient(var(--RADIAL-COLOR), var(--BGCOLOR));
+
+
+}
+
+main section {
+    flex-grow: 1;
+    padding: var(--PADDING);
+
+
+}
+
+main aside {
+    background-color: hsla(0, 0%, 20%, 0.8);
+    color: var(--ALT-FONTCOLOR);
+    font-size: var(--FS-XL);
+    font-style: italic;
+    padding: var(--PADDING);
+}
+
+header,
+footer,
+nav {
+    display: grid;
+    grid-template-columns: 100%;
+    place-content: center;
+    text-align: center;
+    color: var(--ALT-FONTCOLOR);
+    position: sticky;
+
+}
+
+header {
+    top: 0;
+
+}
+
+footer {
+    bottom: 0;
+
+}
+
+nav {
+    background-color: var(--RADIAL-COLOR);
+    color: var(--FONT-COLOR);
+    border-bottom: var(--BORDER);
+}
+
+.content {
+    font-size: var(--FONTPARA-SIZE);
+    margin-top: 20px;
+}
+
+.tooltip {
+    border-bottom: 1px dashed orange;
+    position: relative;
+}
+
+.tooltip:hover::before {
+
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -25px;
+    white-space: nowrap;
+    background-color: var(--FONT-COLOR);
+    padding: var(--PADDING);
+    border-radius: 15px;
+
+
+
+}
+
+a:any-link {
+    color: firebrick;
+}
+
+a:hover,
+a:focus {
+    filter: brightness(150%);
+    /* this filter function helps to brighten the link. */
+}
+
+aside :is(a:hover,
+    a:focus) {
+    filter: hue-rotate(270deg);
+    /* this function helps to change the color based on the rotation  angle it takes */
+
+}
+
+@media screen and (min-width: 576px) {
+
+
+    main {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    main section {
+        width: calc(70% - 5px);
+
+        /* calc() function used to calculate here in this case it calculates the width according to the webpage. */
+    }
+
+    main aside {
+        width: calc(30% - 5px);
+    }
+}
