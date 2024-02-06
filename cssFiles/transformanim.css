@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child {
+    background-color: dodgerblue;
+    transform: rotate(180deg);
+    /*     transform: translateX(50%);
+    transform: scaleX(150%);
+    transform: skewX(10deg); */
+    /* transform: translateX(50%); 
+
+    translateX() moves the blocks into left or right if its a +ve value it move towards right .If it is a -ve value it moves towards left
+     
+    transform:rotateX(180deg);
+
+    it rotate the block 18o degree in x axis
+
+    transform:scaleX(150%);
+
+    it make the image grew upto 150% on x axis 
+
+    transform:skewX();
+    It covert a normal block into a linear one
+    */
+}
+
+div:nth-child(2) {
+    background-color: yellow;
+    transform: translateY(3rem);
+    /* transform: scaleY(120%);
+    transform: rotateY(45deg);
+    transform: skewY(-10deg); */
+    /* 
+    transform: translateY(-2rem);
+
+    translateX() moves the blocks into top or down if its a +ve value it move towards down .If it is a -ve value it moves towards top 
+    
+    transform:rotateY(45deg);
+    it rotate the block 45 degree in y axis
+
+    transform:scaleY(120%);
+    it make the image grew upto 120% on y axis
+
+    transform: skewY(-10deg);
+    It convert the block into linear one based on y axis
+
+    */
+}
+
+div:nth-child(3) {
+    background-color: fuchsia;
+    transform: scale(50%, 50%);
+
+}
+
+div:last-child {
+    background-color: limegreen;
+    /* transform: translate(100%, -5rem);
+    transform: rotate(75deg); 
+    transform: scale(50%, 50%);*/
+    transform: skew(10deg, -10deg);
+
+
+    /*     transform: translate(100%, -5rem);
+
+    it combines both translate and translateY
+ 
+    transform: rotate(75deg);
+    it rotates the block clockwise
+
+    transform:scale(50%,50%);
+    actually it shrink the size of the image since it grew upto 50% .
+    */
+}
